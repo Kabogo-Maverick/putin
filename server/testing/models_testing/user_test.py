@@ -91,6 +91,7 @@ class TestUser:
             db.session.commit()
 
             user = User(username="Prabhdip")
+            user.password_hash = "strongpassword123"  # This sets _password_hash using the setter
 
             recipe_1 = Recipe(
                 title="Delicious Shed Ham",
